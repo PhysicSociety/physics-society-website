@@ -20,7 +20,12 @@ header{position:sticky;top:0;background:rgba(7,9,15,.8);backdrop-filter: blur(8p
 .nav .spacer{flex:1}
 .nav a.btn{padding:8px 14px;border:1px solid #2a3154;border-radius:8px}
 .hero{max-width:1100px;margin:18px auto 24px;display:grid;grid-template-columns:120px 1fr;gap:18px;padding:0 16px;align-items:center}
-.hero img{width:120px;height:120px;border-radius:50%;box-shadow:0 0 0 6px #141a2e;image-rendering: pixelated}
+.hero img {
+  width: auto;
+  height: 80px;
+  border-radius: 0;
+  image-rendering: auto;
+}
 h1{font-size:clamp(28px, 3vw, 40px);margin:0 0 6px}
 .subtitle{color:var(--muted);margin-top:0}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
