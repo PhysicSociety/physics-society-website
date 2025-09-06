@@ -80,59 +80,26 @@ ul{margin-top:6px}
 @keyframes drift{to{background-position:200px 200px, 180px 180px, 160px 160px}}
 blockquote{border-left:3px solid #2a3154;padding-left:12px;color:#b9c2ee}
 
-/* --- Mobile styles for screens < 768px wide --- */
-@media (max-width: 768px) {
-  body {
-    padding: 0 12px;
-  }
+/* ===== Mobile fixes (force override) ===== */
+@media (max-width: 700px) {
 
-  /* Logo and navbar adjustments */
-  .nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-  }
-  .nav img {
-    width: 32px;
-    height: 32px;
-  }
-  .nav a {
-    font-size: 0.9rem;
-    padding: 4px 8px;
-  }
+  body { padding: 0 12px !important; }
 
-  /* Hero section */
-  .hero {
-    grid-template-columns: 1fr; /* stack logo & text */
-    text-align: center;
-  }
-  .hero img {
-    margin: 0 auto;
-    width: 100px;
-    height: auto;
-  }
-  .hero .cta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-  }
+  /* Navbar: wrap + smaller */
+  .nav { flex-wrap: wrap !important; justify-content: center !important; gap: 8px !important; }
+  .nav img { width: 32px !important; height: 32px !important; }
+  .nav a { font-size: 0.9rem !important; padding: 4px 8px !important; }
 
-  /* Cards and grids */
-  .grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .card {
-    padding: 12px;
-    font-size: 0.95rem;
-  }
+  /* Hero: stack logo and text */
+  .hero { display: grid !important; grid-template-columns: 1fr !important; text-align: center !important; }
+  .hero img { margin: 0 auto !important; width: 96px !important; height: auto !important; }
+  .hero .cta { display: flex !important; flex-wrap: wrap !important; justify-content: center !important; gap: 6px !important; }
 
-  /* Spotify iframe */
-  iframe {
-    width: 100% !important;
-    height: 250px;
-  }
+  /* Cards/grid spacing */
+  .grid { display: flex !important; flex-direction: column !important; gap: 12px !important; }
+  .card { padding: 12px !important; font-size: 0.95rem !important; }
+
+  /* Make iframes and images full width */
+  iframe { width: 100% !important; height: 260px !important; }
+  img { max-width: 100% !important; height: auto !important; }
 }
-
