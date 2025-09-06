@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>How to Publish a Blog Post • Physics Society</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="styles.css?v=8">
+</head>
+<body>
+<header class="starfield">
+  <div class="nav">
+    <img src="assets/logo.jpg" alt="Physics Society logo">
+    <a class="brand" href="index.html">Physics Society</a>
+    <a href="index.html">Home</a>
+    <a href="posts.html">Blog</a>
+    <a href="events.html">Events</a>
+    <a href="about.html">About</a>
+    <a class="btn" href="https://discord.gg/FcwTBsRfcD" target="_blank">Discord</a>
+    <a class="btn" href="https://www.youtube.com/@PhysicsSociety-AndBeyond" target="_blank">YouTube</a>
+    <a class="btn" href="https://open.spotify.com/show/5vEZH1IP8fbT1NjkrkgNVY?si=630fa0ec8f5b44fd" target="_blank">Spotify</a>
+    <a class="btn" href="https://www.instagram.com/physicssociety__/" target="_blank">Instagram</a>
+    <a class="btn" href="posts.html">Latest Posts</a>
+    <a class="btn" href="contact.html">Email</a>
+  </div>
+</header>
+
+<main>
+  <h1>How to Publish a Blog Post</h1>
+  <p>Follow these steps to write and publish your own article for the Physics Society blog. No coding experience required!</p>
+
+  <div class="card">
+    <h2>Step 1: Open the Repo</h2>
+    <p>Go to our <a href="https://github.com/PhysicsSociety/physics-society-website" target="_blank">GitHub repository</a> in your browser and click the <strong>posts</strong> folder.</p>
+  </div>
+
+  <div class="card">
+    <h2>Step 2: Create a New File</h2>
+    <ol>
+      <li>Click <strong>Add file → Create new file</strong>.</li>
+      <li>Enter a filename like: <code>posts/2025-09-07-your-title.html</code></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Step 3: Paste Template & Write</h2>
+    <p>Paste this template and replace the title, author, and content:</p>
+<pre class="code">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+  &lt;title&gt;POST TITLE • Physics Society&lt;/title&gt;
+  &lt;link rel="icon" type="image/png" href="../assets/favicon.png"&gt;
+  &lt;link rel="stylesheet" href="../styles.css?v=8"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header class="starfield"&gt;... (nav) ...&lt;/header&gt;
+&lt;main&gt;
+  &lt;h1&gt;POST TITLE&lt;/h1&gt;
+  &lt;small&gt;Your Name • YYYY-MM-DD&lt;/small&gt;
+  &lt;hr&gt;
+  &lt;p&gt;Write your post here.&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+  </div>
+
+  <div class="card">
+    <h2>Step 4: Commit</h2>
+    <p>Scroll down and click <strong>Commit changes</strong>. Your post will go live in ~1 minute.</p>
+  </div>
+
+  <div class="card">
+    <h2>Step 5: Add a Card to Blog List</h2>
+    <ol>
+      <li>Edit <code>posts.html</code>.</li>
+      <li>Add a card like this inside the grid:</li>
+    </ol>
+<pre class="code">&lt;div class="card"&gt;
+  &lt;h3&gt;&lt;a href="posts/2025-09-07-your-title.html"&gt;Post Title&lt;/a&gt;&lt;/h3&gt;
+  &lt;small&gt;Your Name • 2025-09-07&lt;/small&gt;
+  &lt;p&gt;A short summary here.&lt;/p&gt;
+&lt;/div&gt;</pre>
+  </div>
+
+  <div class="card">
+    <h2>Step 6: Add Images (Optional)</h2>
+    <ol>
+      <li>Go to the <code>assets/</code> folder → <strong>Upload files</strong>.</li>
+      <li>Insert images in your post like:
+<pre class="code">&lt;img src="../assets/your-image.png" alt="Description"&gt;</pre>
+      </li>
+    </ol>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <small>© Physics Society • <a href="mailto:physicsociety2025@gmail.com">physicsociety2025@gmail.com</a></small>
+  </div>
+</footer>
+</body>
+</html>
