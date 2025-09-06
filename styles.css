@@ -79,3 +79,60 @@ ul{margin-top:6px}
 }
 @keyframes drift{to{background-position:200px 200px, 180px 180px, 160px 160px}}
 blockquote{border-left:3px solid #2a3154;padding-left:12px;color:#b9c2ee}
+
+/* --- Mobile styles for screens < 768px wide --- */
+@media (max-width: 768px) {
+  body {
+    padding: 0 12px;
+  }
+
+  /* Logo and navbar adjustments */
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  .nav img {
+    width: 32px;
+    height: 32px;
+  }
+  .nav a {
+    font-size: 0.9rem;
+    padding: 4px 8px;
+  }
+
+  /* Hero section */
+  .hero {
+    grid-template-columns: 1fr; /* stack logo & text */
+    text-align: center;
+  }
+  .hero img {
+    margin: 0 auto;
+    width: 100px;
+    height: auto;
+  }
+  .hero .cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  /* Cards and grids */
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .card {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  /* Spotify iframe */
+  iframe {
+    width: 100% !important;
+    height: 250px;
+  }
+}
+
