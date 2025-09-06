@@ -19,12 +19,22 @@ header{position:sticky;top:0;background:rgba(7,9,15,.8);backdrop-filter: blur(8p
 .nav a.brand{font-weight:800;letter-spacing:.5px}
 .nav .spacer{flex:1}
 .nav a.btn{padding:8px 14px;border:1px solid #2a3154;border-radius:8px}
-.hero{max-width:1100px;margin:18px auto 24px;display:grid;grid-template-columns:120px 1fr;gap:18px;padding:0 16px;align-items:center}
-.hero img {
-  width: auto;
-  height: 80px;
-  border-radius: 0;
-  image-rendering: auto;
+.hero {
+  max-width: 1100px;
+  margin: 18px auto 24px;
+  display: flex; /* simpler than grid if only logo + text */
+  align-items: center;
+  gap: 18px;
+  padding: 0 16px;
+}
+
+.hero img{
+  height:96px;
+  width:96px;          /* force a square */
+  object-fit:cover;    /* clean crop */
+  border-radius:50%;   /* circle, but not pixelated */
+  image-rendering:auto;
+  box-shadow:0 0 0 4px #141a2e;
 }
 h1{font-size:clamp(28px, 3vw, 40px);margin:0 0 6px}
 .subtitle{color:var(--muted);margin-top:0}
