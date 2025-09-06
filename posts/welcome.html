@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Welcome to the Physics Society blog</title>
   <link rel="icon" type="image/png" href="../assets/favicon.png">
-  <link rel="stylesheet" href="../styles.css?v=4">
+  <link rel="stylesheet" href="../styles.css?v=6">
 </head>
 <body>
 <header class="starfield">
@@ -13,7 +13,7 @@
     <img src="../assets/logo.jpg" alt="Physics Society logo">
     <a class="brand" href="../index.html">Physics Society</a>
     <a href="../index.html">Home</a>
-    <a href="../posts.html">Blog</a>
+    <a href="../posts.html" style="text-decoration:underline;">Blog</a>
     <a href="../events.html">Events</a>
     <a href="../about.html">About</a>
     <a class="btn" href="https://discord.gg/FcwTBsRfcD" target="_blank">Discord</a>
@@ -29,13 +29,123 @@
   <h1>Welcome to the Physics Society blog</h1>
   <small>Team • 2025-09-06</small>
   <hr>
-  <p>What you can expect here: meeting recaps, lab highlights, explainers we wish existed, and notes from the frontier where theory smacks into reality.</p>
-  <p>Want to write? Fork the repo and add a post using <code class="code">/posts/template.html</code>.</p>
+
+  <p>Here’s how anyone in the club can publish a post in minutes—no command line needed. If you get stuck, email us at <a href="mailto:physicsociety2025@gmail.com">physicsociety2025@gmail.com</a>.</p>
+
+  <h2>Quick start (GitHub website, easiest)</h2>
+  <ol>
+    <li>Open our GitHub repo in your browser.</li>
+    <li>Click the <strong>posts</strong> folder.</li>
+    <li>Click <strong>Add file → Create new file</strong>.</li>
+    <li>In the filename box, type: <code class="code">posts/YYYY-MM-DD-short-title.html</code><br>
+        Example: <code class="code">posts/2025-09-07-quantum-rumors.html</code></li>
+    <li>Paste the <strong>Post Template</strong> below into the editor.</li>
+    <li>Change the <em>Title</em>, <em>Author</em>, <em>Date</em>, and write your post.</li>
+    <li>Scroll down and click <strong>Commit changes</strong>.</li>
+    <li>Your post will be live at: <code class="code">/physics-society-website/posts/YYYY-MM-DD-short-title.html</code> in ~1 minute.</li>
+    <li>Last step: add a card for your post to <strong>posts.html</strong> (instructions below).</li>
+  </ol>
+
+  <h2>Add images (optional)</h2>
+  <ol>
+    <li>In the repo, click <strong>assets</strong> → <strong>Add file → Upload files</strong>.</li>
+    <li>Upload your image(s). Use descriptive names (e.g., <code class="code">lattice-defect-sem.png</code>).</li>
+    <li>In your post, reference them like:<br>
+      <pre class="code">&lt;img src="../assets/lattice-defect-sem.png" alt="SEM of lattice defect" style="max-width:100%;height:auto;border-radius:8px;"&gt;</pre>
+    </li>
+  </ol>
+
+  <h2>Post template (copy–paste this)</h2>
+  <pre class="code">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+  &lt;title&gt;POST TITLE • Physics Society&lt;/title&gt;
+  &lt;link rel="icon" type="image/png" href="../assets/favicon.png"&gt;
+  &lt;link rel="stylesheet" href="../styles.css?v=6"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;header class="starfield"&gt;
+  &lt;div class="nav"&gt;
+    &lt;img src="../assets/logo.jpg" alt="Physics Society logo"&gt;
+    &lt;a class="brand" href="../index.html"&gt;Physics Society&lt;/a&gt;
+    &lt;a href="../index.html"&gt;Home&lt;/a&gt;
+    &lt;a href="../posts.html" style="text-decoration:underline;"&gt;Blog&lt;/a&gt;
+    &lt;a href="../events.html"&gt;Events&lt;/a&gt;
+    &lt;a href="../about.html"&gt;About&lt;/a&gt;
+    &lt;a class="btn" href="https://discord.gg/FcwTBsRfcD" target="_blank"&gt;Discord&lt;/a&gt;
+    &lt;a class="btn" href="https://www.youtube.com/@PhysicsSociety-AndBeyond" target="_blank"&gt;YouTube&lt;/a&gt;
+    &lt;a class="btn" href="https://open.spotify.com/show/5vEZH1IP8fbT1NjkrkgNVY?si=630fa0ec8f5b44fd" target="_blank"&gt;Spotify&lt;/a&gt;
+    &lt;a class="btn" href="https://www.instagram.com/physicssociety__/" target="_blank"&gt;Instagram&lt;/a&gt;
+    &lt;a class="btn" href="../posts.html"&gt;Latest Posts&lt;/a&gt;
+    &lt;a class="btn" href="../contact.html"&gt;Email&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;h1&gt;POST TITLE&lt;/h1&gt;
+  &lt;small&gt;Author Name • YYYY-MM-DD&lt;/small&gt;
+  &lt;hr&gt;
+
+  &lt;p&gt;Opening paragraph. Hook the reader; give context in plain language.&lt;/p&gt;
+
+  &lt;!-- Optional image example
+  &lt;img src="../assets/my-figure.png" alt="Descriptive alt text" style="max-width:100%;height:auto;border-radius:8px;"&gt;
+  --&gt;
+
+  &lt;h2&gt;Subheading&lt;/h2&gt;
+  &lt;p&gt;Body text... 500–900 words is a great target.&lt;/p&gt;
+
+  &lt;h3&gt;References / further reading&lt;/h3&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="https://example.com" target="_blank"&gt;Link Name&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;div class="wrap"&gt;
+    &lt;small&gt;© Physics Society • &lt;a href="mailto:physicsociety2025@gmail.com"&gt;physicsociety2025@gmail.com&lt;/a&gt;&lt;/small&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+  <h2>Add your post to the listing (posts.html)</h2>
+  <ol>
+    <li>Open <strong>posts.html</strong> → Edit.</li>
+    <li>Inside the <code class="code">&lt;div class="grid"&gt; ... &lt;/div&gt;</code>, copy one of the existing cards and edit it, e.g.:
+      <pre class="code">&lt;div class="card"&gt;
+  &lt;h3&gt;&lt;a href="posts/2025-09-07-quantum-rumors.html"&gt;Quantum Rumors: What’s Real?&lt;/a&gt;&lt;/h3&gt;
+  &lt;small&gt;By Your Name • 2025-09-07&lt;/small&gt;
+  &lt;p&gt;A quick tour of what’s hype versus hope in quantum tech.&lt;/p&gt;
+&lt;/div&gt;</pre>
+    </li>
+    <li>Commit changes. Your post now appears on the Blog page.</li>
+  </ol>
+
+  <h2>Writing tips</h2>
+  <ul>
+    <li><strong>Length:</strong> 500–900 words works great.</li>
+    <li><strong>Audience:</strong> smart undergrads & curious non-majors—explain jargon once.</li>
+    <li><strong>Images:</strong> add alt text; use your own figures or properly credited ones.</li>
+    <li><strong>Citations:</strong> link sources; avoid copy-paste from elsewhere.</li>
+    <li><strong>Tone:</strong> skeptical, clear, and fun—evidence over vibes.</li>
+  </ul>
+
+  <h2>Advanced (optional, for git users)</h2>
+  <ol>
+    <li><code class="code">git clone &lt;repo-url&gt;</code></li>
+    <li>Add your file in <code class="code">posts/</code> and images in <code class="code">assets/</code>.</li>
+    <li><code class="code">git checkout -b post/&lt;short-title&gt;</code></li>
+    <li><code class="code">git add . &amp;&amp; git commit -m "Add post: &lt;title&gt;"</code></li>
+    <li><code class="code">git push -u origin HEAD</code> then open a Pull Request.</li>
+  </ol>
 </main>
 
 <footer>
   <div class="wrap">
-    <small>© Physics Society • Hosted on GitHub Pages.</small>
+    <small>© Physics Society • <a href="mailto:physicsociety2025@gmail.com">physicsociety2025@gmail.com</a> • Hosted on GitHub Pages.</small>
   </div>
 </footer>
 </body>
