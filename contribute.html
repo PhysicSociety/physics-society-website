@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>How to Publish a Blog Post • Physics Society</title>
   <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 </head>
 <body>
 <header class="starfield">
@@ -27,24 +27,38 @@
 
 <main>
   <h1>How to Publish a Blog Post</h1>
-  <p>Follow these steps to write and publish your own article for the Physics Society blog. No coding experience required!</p>
+  <p>This is a step-by-step guide for anyone (no coding required!) to add their own blog post to the Physics Society website.  
+  Every step has a place for screenshots so that anyone can follow along visually.</p>
 
+  <!-- STEP 1 -->
   <div class="card">
-    <h2>Step 1: Open the Repo</h2>
-    <p>Go to our <a href="https://github.com/PhysicsSociety/physics-society-website" target="_blank">GitHub repository</a> in your browser and click the <strong>posts</strong> folder.</p>
+    <h2>1) Open the Repository</h2>
+    <ol>
+      <li>Go to our <a href="https://github.com/PhysicsSociety/physics-society-website" target="_blank">GitHub repository</a>.</li>
+      <li>Click the <strong>posts</strong> folder to view all existing blog posts.</li>
+    </ol>
+    <img src="assets/guide/01_repo_home.png" alt="Screenshot: GitHub repository homepage" style="max-width:100%;border-radius:8px;margin-top:10px;">
+    <img src="assets/guide/02_open_posts_folder.png" alt="Screenshot: Opening the posts folder" style="max-width:100%;border-radius:8px;margin-top:10px;">
   </div>
 
+  <!-- STEP 2 -->
   <div class="card">
-    <h2>Step 2: Create a New File</h2>
+    <h2>2) Create a New File</h2>
     <ol>
       <li>Click <strong>Add file → Create new file</strong>.</li>
-      <li>Enter a filename like: <code>posts/2025-09-07-your-title.html</code></li>
+      <li>Name your file like this:  
+        <code>posts/YYYY-MM-DD-your-title.html</code><br>
+        Example: <code>posts/2025-09-07-quantum-post.html</code></li>
     </ol>
+    <img src="assets/guide/03_add_file_create.png" alt="Screenshot: Add file menu" style="max-width:100%;border-radius:8px;margin-top:10px;">
+    <img src="assets/guide/04_filename_box.png" alt="Screenshot: Filename input box" style="max-width:100%;border-radius:8px;margin-top:10px;">
   </div>
 
+  <!-- STEP 3 -->
   <div class="card">
-    <h2>Step 3: Paste Template & Write</h2>
-    <p>Paste this template and replace the title, author, and content:</p>
+    <h2>3) Paste the Template and Edit</h2>
+    <p>Paste the full template below into your new file. Update the title, date, and author. Then write your content below the <code>&lt;hr&gt;</code> tag.</p>
+    <img src="assets/guide/05_paste_template.png" alt="Screenshot: Template pasted into editor" style="max-width:100%;border-radius:8px;margin-top:10px;">
 <pre class="code">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -52,53 +66,82 @@
   &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
   &lt;title&gt;POST TITLE • Physics Society&lt;/title&gt;
   &lt;link rel="icon" type="image/png" href="../assets/favicon.png"&gt;
-  &lt;link rel="stylesheet" href="../styles.css?v=8"&gt;
+  &lt;link rel="stylesheet" href="../styles.css?v=9"&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;header class="starfield"&gt;... (nav) ...&lt;/header&gt;
+&lt;header class="starfield"&gt;...nav here...&lt;/header&gt;
+
 &lt;main&gt;
   &lt;h1&gt;POST TITLE&lt;/h1&gt;
   &lt;small&gt;Your Name • YYYY-MM-DD&lt;/small&gt;
   &lt;hr&gt;
-  &lt;p&gt;Write your post here.&lt;/p&gt;
+
+  &lt;p&gt;Write your content here. Break it into paragraphs. You can use &lt;h2&gt;Subheadings&lt;/h2&gt;.&lt;/p&gt;
+
+  &lt;!-- Example image
+  &lt;img src="../assets/your-image.png" alt="Description" style="max-width:100%;border-radius:8px;"&gt;
+  --&gt;
+
 &lt;/main&gt;
-&lt;footer&gt;...&lt;/footer&gt;
+
+&lt;footer&gt;
+  &lt;div class="wrap"&gt;
+    &lt;small&gt;© Physics Society • &lt;a href="mailto:physicsociety2025@gmail.com"&gt;physicsociety2025@gmail.com&lt;/a&gt;&lt;/small&gt;
+  &lt;/div&gt;
+&lt;/footer&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
   </div>
 
+  <!-- STEP 4 -->
   <div class="card">
-    <h2>Step 4: Commit</h2>
-    <p>Scroll down and click <strong>Commit changes</strong>. Your post will go live in ~1 minute.</p>
+    <h2>4) Commit the File</h2>
+    <p>Scroll to the bottom of the page and click <strong>Commit changes</strong>. Wait ~1 minute for GitHub Pages to update.</p>
+    <img src="assets/guide/06_commit_changes.png" alt="Screenshot: Commit changes button" style="max-width:100%;border-radius:8px;margin-top:10px;">
   </div>
 
+  <!-- STEP 5 -->
   <div class="card">
-    <h2>Step 5: Add a Card to Blog List</h2>
+    <h2>5) Add Your Post to the Blog Listing</h2>
     <ol>
-      <li>Edit <code>posts.html</code>.</li>
-      <li>Add a card like this inside the grid:</li>
+      <li>Open <code>posts.html</code> in the root folder.</li>
+      <li>Find the <code>&lt;div class="grid"&gt;</code> section.</li>
+      <li>Copy one of the existing cards and replace it with your info:</li>
     </ol>
 <pre class="code">&lt;div class="card"&gt;
-  &lt;h3&gt;&lt;a href="posts/2025-09-07-your-title.html"&gt;Post Title&lt;/a&gt;&lt;/h3&gt;
-  &lt;small&gt;Your Name • 2025-09-07&lt;/small&gt;
-  &lt;p&gt;A short summary here.&lt;/p&gt;
+  &lt;h3&gt;&lt;a href="posts/2025-09-07-quantum-post.html"&gt;Quantum Rumors: What's Real?&lt;/a&gt;&lt;/h3&gt;
+  &lt;small&gt;By Your Name • 2025-09-07&lt;/small&gt;
+  &lt;p&gt;A one-line summary of your post here.&lt;/p&gt;
 &lt;/div&gt;</pre>
+    <img src="assets/guide/07_edit_posts_html.png" alt="Screenshot: Editing posts.html" style="max-width:100%;border-radius:8px;margin-top:10px;">
+    <img src="assets/guide/08_new_card_added.png" alt="Screenshot: New card added" style="max-width:100%;border-radius:8px;margin-top:10px;">
   </div>
 
+  <!-- STEP 6 -->
   <div class="card">
-    <h2>Step 6: Add Images (Optional)</h2>
+    <h2>6) Add Images (Optional)</h2>
     <ol>
-      <li>Go to the <code>assets/</code> folder → <strong>Upload files</strong>.</li>
-      <li>Insert images in your post like:
-<pre class="code">&lt;img src="../assets/your-image.png" alt="Description"&gt;</pre>
+      <li>Open the <code>assets/</code> folder → click <strong>Upload files</strong>.</li>
+      <li>Upload your images. Use descriptive names like <code>quantum-chip.jpg</code>.</li>
+      <li>Use images in your post like this:  
+<pre class="code">&lt;img src="../assets/quantum-chip.jpg" alt="Quantum chip" style="max-width:100%;border-radius:8px;"&gt;</pre>
       </li>
     </ol>
+    <img src="assets/guide/09_assets_upload.png" alt="Screenshot: Uploading images" style="max-width:100%;border-radius:8px;margin-top:10px;">
+  </div>
+
+  <!-- STEP 7 -->
+  <div class="card">
+    <h2>7) Check Your Post Live</h2>
+    <p>Open your post in the browser using its filename:  
+    <code>https://physicssociety.github.io/physics-society-website/posts/2025-09-07-quantum-post.html</code></p>
+    <img src="assets/guide/10_post_live.png" alt="Screenshot: Final live post" style="max-width:100%;border-radius:8px;margin-top:10px;">
   </div>
 </main>
 
 <footer>
   <div class="wrap">
-    <small>© Physics Society • <a href="mailto:physicsociety2025@gmail.com">physicsociety2025@gmail.com</a></small>
+    <small>© Physics Society • <a href="mailto:physicsociety2025@gmail.com">physicsociety2025@gmail.com</a> • Hosted on GitHub Pages.</small>
   </div>
 </footer>
 </body>
