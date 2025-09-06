@@ -1,0 +1,50 @@
+
+/* Physics Society — Space/Pixels Theme */
+:root{
+  --bg: #07090f;
+  --fg: #f7f3ff;
+  --muted: #c9c1ff;
+  --accent: #ffd27e;
+  --shadow: #5f4aa8;
+  --card: #0e1220;
+  --link: #bba7ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;line-height:1.6}
+a{color:var(--link);text-decoration:none}
+a:hover{text-decoration:underline}
+header{position:sticky;top:0;background:rgba(7,9,15,.8);backdrop-filter: blur(8px);border-bottom:1px solid #141a2e;z-index:10}
+.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 16px}
+.nav img{height:40px;width:40px;border-radius:50%;image-rendering: pixelated}
+.nav a.brand{font-weight:800;letter-spacing:.5px}
+.nav .spacer{flex:1}
+.nav a.btn{padding:8px 14px;border:1px solid #2a3154;border-radius:8px}
+.hero{max-width:1100px;margin:18px auto 24px;display:grid;grid-template-columns:120px 1fr;gap:18px;padding:0 16px;align-items:center}
+.hero img{width:120px;height:120px;border-radius:50%;box-shadow:0 0 0 6px #141a2e;image-rendering: pixelated}
+h1{font-size:clamp(28px, 3vw, 40px);margin:0 0 6px}
+.subtitle{color:var(--muted);margin-top:0}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn-primary,.btn-ghost{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid #2a3154}
+.btn-primary{background:linear-gradient(180deg, #201845, #121531);box-shadow:0 10px 24px rgba(91,73,180,.25)}
+.btn-ghost{background:transparent}
+main{max-width:1100px;margin:0 auto;padding:8px 16px 60px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:linear-gradient(180deg,#0f1425,#0b1020);border:1px solid #141a2e;border-radius:14px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.card h3{margin-top:0}
+footer{border-top:1px solid #141a2e;color:#9aa4d1}
+footer .wrap{max-width:1100px;margin:0 auto;padding:22px 16px}
+small{color:#9aa4d1}
+hr{border:0;border-top:1px solid #141a2e;margin:18px 0}
+ul{margin-top:6px}
+.code{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; background:#0b0f1a;border:1px solid #1b2140;border-radius:10px;padding:12px;display:block;overflow:auto}
+.starfield{
+  --s: radial-gradient(2px 2px at 20px 30px, #fff 50%, transparent 51%),
+       radial-gradient(1px 1px at 60px 80px, #fff 50%, transparent 51%),
+       radial-gradient(2px 2px at 130px 110px, #fff 50%, transparent 51%),
+       radial-gradient(1px 1px at 170px 40px, #fff 50%, transparent 51%);
+  background-image: var(--s), var(--s), var(--s);
+  background-size: 200px 200px, 180px 180px, 160px 160px;
+  animation: drift 120s linear infinite;
+}
+@keyframes drift{to{background-position:200px 200px, 180px 180px, 160px 160px}}
+blockquote{border-left:3px solid #2a3154;padding-left:12px;color:#b9c2ee}
