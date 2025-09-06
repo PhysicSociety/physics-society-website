@@ -14,27 +14,43 @@ html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family: '
 a{color:var(--link);text-decoration:none}
 a:hover{text-decoration:underline}
 header{position:sticky;top:0;background:rgba(7,9,15,.8);backdrop-filter: blur(8px);border-bottom:1px solid #141a2e;z-index:10}
-.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:10px 16px}
-.nav img{height:40px;width:40px;border-radius:50%;image-rendering: pixelated}
+.nav{
+  max-width:1100px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:10px 16px;
+}
+.nav img{
+  width:40px;
+  height:40px;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:50%;
+  image-rendering:auto;
+  box-shadow:0 0 0 2px #141a2e;
+}
 .nav a.brand{font-weight:800;letter-spacing:.5px}
 .nav .spacer{flex:1}
 .nav a.btn{padding:8px 14px;border:1px solid #2a3154;border-radius:8px}
-.hero {
-  max-width: 1100px;
-  margin: 18px auto 24px;
-  display: flex; /* simpler than grid if only logo + text */
-  align-items: center;
-  gap: 18px;
-  padding: 0 16px;
+.hero{
+  max-width:1100px;
+  margin:18px auto 24px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:0 16px;
 }
-
 .hero img{
-  height:96px;
-  width:96px;          /* force a square */
-  object-fit:cover;    /* clean crop */
-  border-radius:50%;   /* circle, but not pixelated */
+  width:96px;
+  height:96px;          /* equal => no “egg” */
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius:50%;
   image-rendering:auto;
   box-shadow:0 0 0 4px #141a2e;
+  display:block;
 }
 h1{font-size:clamp(28px, 3vw, 40px);margin:0 0 6px}
 .subtitle{color:var(--muted);margin-top:0}
